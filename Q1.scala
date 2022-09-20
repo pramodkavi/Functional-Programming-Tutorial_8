@@ -16,10 +16,8 @@ object Q1 extends App{
 
 }
 
-case class Point(a:Int, b:Int){
+case class Point(var x:Int, var y:Int){
     
-    var x :Int = a;
-    var y :Int = b;
 
     // part 1
 
@@ -30,8 +28,8 @@ case class Point(a:Int, b:Int){
     // part 2
 
     def move (dx : Int ,dy : Int )={
-        this.x += dx;
-        this.y += dy;
+        this.x = this.x + dx;
+        this.y = this.y +  dy;
     }
 
     // part 3
@@ -42,7 +40,6 @@ case class Point(a:Int, b:Int){
         var result: Int = distanceOfx*distanceOfx + distanceOfy*distanceOfy;
 
         scala.math.sqrt(result);
-
     }
 
 
